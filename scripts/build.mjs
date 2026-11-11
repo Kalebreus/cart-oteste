@@ -10,6 +10,6 @@ await writeFile(resolve(root,'dist/server/index.js'),server+'\nconst assets='+JS
 await cp(resolve(root,'.openai/hosting.json'),resolve(root,'dist/.openai/hosting.json'));
 await cp(resolve(root,'drizzle'),resolve(root,'dist/drizzle'),{recursive:true});
 const manifest=JSON.parse(await readFile(resolve(root,'.openai/hosting.json'),'utf8'));
-await writeFile(resolve(root,'dist/server/wrangler.json'),JSON.stringify({name:'gold-packs',main:'index.js',compatibility_date:'2026-01-01',d1_databases:[{binding:'DB',database_name:'gold-packs',database_id:'00000000-0000-0000-0000-000000000000',migrations_dir:'../drizzle'}],r2_buckets:[{binding:'BUCKET',bucket_name:'gold-packs'}]}));
+
 if(!manifest.project_id)throw new Error('Missing Site identity');
 console.log('Gold Packs built: Worker, assets and schema migrations.');
