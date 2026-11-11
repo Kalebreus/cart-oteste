@@ -68,5 +68,141 @@
       "bytes": 112016,
       "sha256": "b1dc096eda5b4515092388b5bd12bb1c487c071dc9d42e49dafb9d47dbb00aec"
     }
+  ],
+  "additionalCardArt": [
+    {
+      "name": "Stonecoil Serpent",
+      "status": "exact_match",
+      "fileName": "stonecoil-serpent.jpg",
+      "sourceURL": "https://cards.scryfall.io/large/front/4/4/44f7b125-46ab-4034-b96a-8cc0e6cc5103.jpg?1783917368",
+      "sourcePage": "https://scryfall.com/card/sld/1226/stonecoil-serpent?utm_source=api",
+      "edition": "Secret Lair Drop #1226",
+      "rarity": "Rara",
+      "mime": "image/jpeg",
+      "width": 672,
+      "height": 936,
+      "bytes": 186174,
+      "sha256": "db404e98502969d1160fd548f02393971593021fad06789d718be634647d2dba",
+      "verification": "Inspeção visual: mesma arte, frame, textos e marcas que o anexo fornecido.",
+      "note": "Versão oficial, artista LAYNES; mesma edição do anexo."
+    },
+    {
+      "name": "Tibalt, Cosmic Impostor",
+      "status": "exact_match",
+      "fileName": "tibalt-cosmic-impostor.jpg",
+      "sourceURL": "https://cards.scryfall.io/large/back/e/3/e3e5c965-a689-4726-b8c2-63b836895939.jpg?1783928157",
+      "sourcePage": "https://scryfall.com/card/khm/308/valki-god-of-lies-tibalt-cosmic-impostor?utm_source=api",
+      "edition": "Kaldheim #308 — Tibalt (verso)",
+      "rarity": "Mítica",
+      "mime": "image/jpeg",
+      "width": 672,
+      "height": 936,
+      "bytes": 191426,
+      "sha256": "0649bb7d6bafdcc6e84c89e23cf858bbc5ad3b953f9180a1443224463d164627",
+      "verification": "Inspeção visual: mesma arte, frame, textos e marcas que o anexo fornecido.",
+      "note": "Verso de Valki, God of Lies; showcase por Jeff Miracola, igual ao anexo."
+    },
+    {
+      "name": "Nicol Bolas, Dragon-God",
+      "status": "exact_match",
+      "fileName": "nicol-bolas-dragon-god.jpg",
+      "sourceURL": "https://i.pinimg.com/originals/38/ac/1a/38ac1ac3a4c473405710059a969849b5.jpg",
+      "sourcePage": "https://www.pinterest.com/pin/nicol-bolas-dragongod--563018696800741/",
+      "edition": "Custom PGD #220",
+      "rarity": null,
+      "mime": "image/jpeg",
+      "width": 1097,
+      "height": 1528,
+      "bytes": 537777,
+      "sha256": "2804d0e6f2381864d5cff361099e4bdec826b48624ff6114f37a5986fb3b6807",
+      "verification": "Inspeção visual: mesma arte, frame, textos e marcas que o anexo fornecido.",
+      "note": "Proxy/fan art com arte de Brandon Holt e design PaulGoddardDesign.com; preservar créditos e indicação Not For Sale."
+    },
+    {
+      "name": "Sol Ring",
+      "status": "exact_match",
+      "fileName": "sol-ring.jpg",
+      "sourceURL": "https://i.pinimg.com/originals/4f/00/5a/4f005a3ed662ded99d70d635e70e488e.jpg",
+      "sourcePage": "https://www.pinterest.com/ideas/mtg-card-backs/933800349042/",
+      "edition": "Alter cósmico fotografado",
+      "rarity": null,
+      "mime": "image/jpeg",
+      "width": 710,
+      "height": 960,
+      "bytes": 109282,
+      "sha256": "cb1868f25b99d32004dc7e9746f38ac232a62b46bc1d184cab3c8c6908281c68",
+      "verification": "Inspeção visual: mesma arte, frame, textos e marcas que o anexo fornecido.",
+      "note": "Arte alterada; fotografia e assinatura correspondem exatamente ao anexo."
+    },
+    {
+      "name": "Greninja ex",
+      "id": "greninja-ex",
+      "sourceURL": "https://assets.tcgdex.net/es/sv/sv06/214/high.png",
+      "metadataURL": "https://api.tcgdex.net/v2/es/cards/sv06-214",
+      "game": "Pokémon",
+      "number": "214/167",
+      "collection": "Mascarada Crepuscular",
+      "language": "es",
+      "rarity": "Ilustração especial rara",
+      "illustrator": "akagi",
+      "status": "exact_match_verified",
+      "mime": "image/png",
+      "dimensions": [
+        600,
+        825
+      ],
+      "sha256": "2d2d07ad44f116451e8126888928e80b010070540d757b853648821deed54c9a",
+      "visualEvidence": "Same artwork, language, set/collector number and typography as the user-provided image. Resolution differs from chat preview only."
+    },
+    {
+      "name": "Charizard VSTAR",
+      "id": "charizard-vstar",
+      "sourceURL": "https://assets.tcgdex.net/ja/S/S12a/212/high.png",
+      "metadataURL": "https://api.tcgdex.net/v2/ja/cards/S12a-212",
+      "game": "Pokémon",
+      "number": "212/172",
+      "collection": "VSTAR Universe",
+      "language": "ja",
+      "rarity": "Ilustração especial rara",
+      "illustrator": "KIYOTAKA OSHIYAMA",
+      "status": "exact_match_verified",
+      "mime": "image/png",
+      "dimensions": [
+        600,
+        825
+      ],
+      "sha256": "8c86335867a2e3bb7aad794c6ad4b38978b4bde9724c961de519a389c942cfd8",
+      "visualEvidence": "Same artwork, language, set/collector number and typography as the user-provided image. Resolution differs from chat preview only."
+    }
+  ],
+  "pendingOriginals": [
+    {
+      "name": "Umbreon ex",
+      "game": "Pokémon"
+    },
+    {
+      "name": "Sarabi, the Golden One",
+      "game": "Magic"
+    },
+    {
+      "name": "Favored Hoplite",
+      "game": "Magic"
+    },
+    {
+      "name": "Lorena’s Gengar ex",
+      "game": "Pokémon"
+    },
+    {
+      "name": "Mago do Caos",
+      "game": "Yu-Gi-Oh!"
+    },
+    {
+      "name": "Live☆Twin Lil-la Treat",
+      "game": "Yu-Gi-Oh!"
+    },
+    {
+      "name": "Legendario Pescador Toon",
+      "game": "Yu-Gi-Oh!"
+    }
   ]
 }

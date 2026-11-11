@@ -21,4 +21,12 @@ A página principal está em `index.html`. O HTML original enviado foi preservad
 
 Os nomes, categorias, valores e links de compra das seis entradas do arquivo enviado estão em `assets/cards.json`. Links de compra abrem o WhatsApp somente por ação do visitante. Os valores não são cotações automáticas. Arkanon e Lymara têm valor não informado.
 
-As seis imagens Magick IA correspondentes aos anexos foram obtidas do [projeto original Dev em Dobro](https://github.com/devemdobro/magick-ia-szpc), preservando a arte e os créditos. Origem e hashes estão em `assets/provenance.json`. As outras ilustrações customizadas exibidas no chat não estão disponíveis como arquivos no workspace. Nicol Bolas e Umbreon usam um estado de imagem pendente em vez de uma ilustração diferente.
+As seis imagens Magick IA correspondentes aos anexos foram obtidas do [projeto original Dev em Dobro](https://github.com/devemdobro/magick-ia-szpc), preservando a arte e os créditos. Origem e hashes estão em `assets/provenance.json`. As outras ilustrações customizadas exibidas no chat não estão disponíveis como arquivos no workspace. As artes personalizadas sem arquivo original acessível usam um estado de imagem pendente em vez de uma ilustração diferente.
+
+## Catálogo completo das cartas apresentadas
+
+O acervo de referência contém 19 cartas: Pokémon (4), Yu-Gi-Oh! (3), Magic (6) e Magick IA (6). Todas aparecem inicialmente no catálogo e podem ser filtradas por jogo. Os seis valores expressamente fornecidos foram mantidos; as outras treze cartas têm valor não informado.
+
+Doze imagens correspondentes aos anexos estão incorporadas: seis Magick IA; Greninja ex espanhol TWM 214/167; Charizard VSTAR japonês S12a 212/172; Stonecoil Serpent SLD 1226; Tibalt, Cosmic Impostor KHM 308 (verso); Nicol Bolas, Dragon-God na arte personalizada Paul Goddard; e Sol Ring alter cósmico. A origem dos arquivos está em `assets/provenance.json`.
+
+Sete artes originais ainda precisam dos arquivos anexos: Umbreon ex MoonlightFox, Lorena’s Gengar ex, Sarabi, the Golden One, Favored Hoplite personalizado, Mago do Caos YuGi35, Live☆Twin Lil-la Treat personalizado e Legendario Pescador Toon. Os registros já existem, sem substituição por outras ilustrações.
