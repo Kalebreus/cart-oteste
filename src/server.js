@@ -1,6 +1,6 @@
 const MAX_VIDEO=64*1024*1024, MAX_IMAGE=5*1024*1024;
-const games=['Pokémon','Magic','Yu-Gi-Oh!','One Piece','Outro'];
-const rarities=['Comum','Incomum','Rara','Ultra rara','Secreta','Lendária'];
+const games=['Pokémon','Magic','Yu-Gi-Oh!','One Piece','Magick IA','Outro'];
+const rarities=['Comum','Incomum','Rara','Épica','Ultra rara','Secreta','Lendária'];
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 function fail(message,status=400){throw Object.assign(new Error(message),{status})}
 function text(value,max,required=true){if(typeof value!=='string')return required?fail('Preencha todos os campos obrigatórios.'):'';value=value.trim();if((required&&!value)||value.length>max)fail('Confira os campos. Um dos textos está vazio ou muito longo.');return value}

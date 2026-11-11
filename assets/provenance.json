@@ -1,0 +1,72 @@
+{
+  "sourceRepository": "https://github.com/devemdobro/magick-ia-szpc",
+  "sourceCommit": "c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc",
+  "files": [
+    {
+      "name": "carta-arkanon.png",
+      "originalPath": "src/imagens/carta-arkanon.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-arkanon.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 329,
+      "height": 363,
+      "bytes": 132225,
+      "sha256": "52c08814148a22c48041d002c52b5de3d2db47e56c2f6a420446d9dba5c54e72"
+    },
+    {
+      "name": "carta-drahven.png",
+      "originalPath": "src/imagens/carta-drahven.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-drahven.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 330,
+      "height": 363,
+      "bytes": 124175,
+      "sha256": "1bf78b0e2c1c8f8eabfad32bf3e9750c904182c770a91fc9b05f2d68b40e8087"
+    },
+    {
+      "name": "carta-kaelthar.png",
+      "originalPath": "src/imagens/carta-kaelthar.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-kaelthar.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 329,
+      "height": 363,
+      "bytes": 131447,
+      "sha256": "ec06acc79dc6d98514ed27cf83aa1c79c2707dbf7e4880a8a4e96751260a776d"
+    },
+    {
+      "name": "carta-lymara.png",
+      "originalPath": "src/imagens/carta-lymara.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-lymara.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 330,
+      "height": 363,
+      "bytes": 115704,
+      "sha256": "7542eb67603713e987d81607b41e8bb35c47921e57ccba2baff7d3887c7d8600"
+    },
+    {
+      "name": "carta-maldrik.png",
+      "originalPath": "src/imagens/carta-maldrik.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-maldrik.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 329,
+      "height": 363,
+      "bytes": 114422,
+      "sha256": "b24a761de8cd9cbed00e3799c1c0825dedb60a91ff9228240fafb46bfc8aa57b"
+    },
+    {
+      "name": "carta-nyxsombra.png",
+      "originalPath": "src/imagens/carta-nyxsombra.png",
+      "sourceUrl": "https://raw.githubusercontent.com/devemdobro/magick-ia-szpc/c848bbaeb4614b6d981ab9b532fc6f51dd5dcabc/src/imagens/carta-nyxsombra.png",
+      "mime": "image/png",
+      "format": "PNG",
+      "width": 329,
+      "height": 363,
+      "bytes": 112016,
+      "sha256": "b1dc096eda5b4515092388b5bd12bb1c487c071dc9d42e49dafb9d47dbb00aec"
+    }
+  ]
+}
