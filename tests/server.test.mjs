@@ -59,7 +59,7 @@ function createR2() {
   return {
     objects,
     async put(key, bytes, options = {}) {
-      objects.set(key, { bytes: new Uint8Array(bytes), ...options });
+      objects.set(key, { bytes: new Uint8Array(bytes instanceof Blob ? await bytes.arrayBuffer() : bytes), ...options });
     },
     async head(key) {
       const object = objects.get(key);
