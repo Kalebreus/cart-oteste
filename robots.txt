@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /signin-with-chatgpt
+Disallow: /signout-with-chatgpt
+Disallow: /callback
+
+Sitemap: https://gold-packs-club.aromaticearth4.chatgpt.site/sitemap.xml

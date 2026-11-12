@@ -13,7 +13,9 @@ O Worker usa bindings `DB` (Cloudflare D1) e `BUCKET` (R2). O schema está em `d
 
 Imagens: JPG/PNG/WebP até 5 MB. Vídeos: MP4/WebM até 64 MB ou links YouTube/Vimeo. O catálogo inicial usa os dados do HTML fornecido e identifica os valores como referência. O site não fornece cotação automática.
 
-Acesso inicial privado. Mudanças de público devem ser feitas pelos controles Sites.
+Link de divulgação: https://gold-packs-club.aromaticearth4.chatgpt.site/
+
+A navegação e a leitura do catálogo e da comunidade ficam disponíveis ao público. Cadastro de cartas, publicações, curtidas e gerenciamento exigem login. Mudanças de público são feitas pelos controles Sites.
 
 ## Código fornecido e catálogo
 
@@ -30,3 +32,9 @@ O acervo de referência contém 19 cartas: Pokémon (4), Yu-Gi-Oh! (3), Magic (6
 Doze imagens correspondentes aos anexos estão incorporadas: seis Magick IA; Greninja ex espanhol TWM 214/167; Charizard VSTAR japonês S12a 212/172; Stonecoil Serpent SLD 1226; Tibalt, Cosmic Impostor KHM 308 (verso); Nicol Bolas, Dragon-God na arte personalizada Paul Goddard; e Sol Ring alter cósmico. A origem dos arquivos está em `assets/provenance.json`.
 
 Sete artes originais ainda precisam dos arquivos anexos: Umbreon ex MoonlightFox, Lorena’s Gengar ex, Sarabi, the Golden One, Favored Hoplite personalizado, Mago do Caos YuGi35, Live☆Twin Lil-la Treat personalizado e Legendario Pescador Toon. Os registros já existem, sem substituição por outras ilustrações.
+
+## Divulgação e descoberta
+
+A página inclui endereço canônico, metadados Open Graph e Twitter para prévias de compartilhamento. `robots.txt` permite a leitura da página pública e informa o `sitemap.xml`. A presença desses arquivos facilita a descoberta e não garante indexação por buscadores.
+
+Este projeto usa um Worker com D1/R2 para cadastro, autenticação e arquivos. O GitHub pode guardar o código-fonte. GitHub Pages sozinho não executa o backend deste projeto.
