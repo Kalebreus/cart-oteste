@@ -38,3 +38,7 @@ Sete artes originais ainda precisam dos arquivos anexos: Umbreon ex MoonlightFox
 A página inclui endereço canônico, metadados Open Graph e Twitter para prévias de compartilhamento. `robots.txt` permite a leitura da página pública e informa o `sitemap.xml`. A presença desses arquivos facilita a descoberta e não garante indexação por buscadores.
 
 Este projeto usa um Worker com D1/R2 para cadastro, autenticação e arquivos. O GitHub pode guardar o código-fonte. GitHub Pages sozinho não executa o backend deste projeto.
+
+## Baixar o código
+
+Uma cópia do código, imagens disponíveis e testes pode ser baixada em https://gold-packs-club.aromaticearth4.chatgpt.site/downloads/gold-packs-codigo.zip. O ZIP contém os arquivos fonte e a configuração do Site, sem credenciais, registros do banco de dados ou vídeos enviados. Para enviar manualmente ao GitHub, extraia o ZIP e envie os arquivos da pasta `gold-packs` ao repositório.
