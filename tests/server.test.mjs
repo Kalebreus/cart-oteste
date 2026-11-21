@@ -346,3 +346,97 @@ test('unavailable storage returns an actionable service error', async t => {
   delete f.env.DB;
   assert.equal((await f.send('/api/cards')).status, 503);
 });
+
+const PAGES_ORIGIN = 'https://kalebreus.github.io';
+
+test('GitHub Pages reads public cards and videos without receiving account ownership or liked state', async t => {
+  const f = fixture(t);
+  const card = await f.send('/api/cards', { method: 'POST', body: CARD });
+  const video = await f.send('/api/videos', { method: 'POST', body: VIDEO });
+  assert.equal(card.status, 201);
+  assert.equal(video.status, 201);
+  await f.send('/api/videos/' + video.body.id + '/like', { method: 'POST' });
+  for (const path of ['/api/cards', '/api/videos']) {
+    const response = await f.send(path, {
+      origin: PAGES_ORIGIN,
+      headers: { cookie: 'session=existing-browser-session', authorization: 'Bearer example-user-token' },
+    });
+    assert.equal(response.status, 200, path);
+    assert.equal(response.headers.get('access-control-allow-origin'), PAGES_ORIGIN);
+    assert.equal(response.headers.get('access-control-allow-credentials'), null);
+    assert.equal(response.headers.get('vary'), 'Origin');
+    const entry = response.body[path === '/api/cards' ? 'cards' : 'videos'][0];
+    assert.equal(entry.isOwner, false, path + ' must be anonymous even with injected identity headers');
+    if (path === '/api/videos') {
+      assert.equal(entry.likes, 1, 'public aggregate remains visible');
+      assert.equal(entry.liked, false, 'private like state is not disclosed');
+    }
+  }
+  assert.equal((await f.send('/api/cards')).body.cards[0].isOwner, true, 'same-origin session retains ownership');
+  assert.equal((await f.send('/api/videos')).body.videos[0].liked, true, 'same-origin session retains like state');
+});
+
+test('GitHub Pages preflight is limited to GET on the public catalogue and feed', async t => {
+  const f = fixture(t);
+  for (const path of ['/api/cards', '/api/videos']) {
+    const response = await f.raw(path, {
+      method: 'OPTIONS', origin: PAGES_ORIGIN,
+      headers: { 'access-control-request-method': 'GET', 'access-control-request-headers': 'content-type' },
+    });
+    assert.equal(response.status, 204, path);
+    assert.equal(await response.text(), '');
+    assert.equal(response.headers.get('access-control-allow-origin'), PAGES_ORIGIN);
+    assert.equal(response.headers.get('access-control-allow-methods'), 'GET, OPTIONS');
+    assert.equal(response.headers.get('access-control-allow-headers'), 'Content-Type');
+    assert.equal(response.headers.get('access-control-allow-credentials'), null);
+    assert.equal((await f.raw(path, {
+      method: 'OPTIONS', origin: PAGES_ORIGIN,
+      headers: { 'access-control-request-method': 'POST' },
+    })).status, 403);
+  }
+  for (const path of ['/api/me', '/api/upload']) {
+    assert.equal((await f.raw(path, {
+      method: 'OPTIONS', origin: PAGES_ORIGIN,
+      headers: { 'access-control-request-method': 'GET' },
+    })).status, 403, path);
+  }
+});
+
+test('GitHub Pages cannot read identity or perform card, video, upload and like mutations', async t => {
+  const f = fixture(t);
+  const cardId = (await f.send('/api/cards', { method: 'POST', body: CARD })).body.id;
+  const videoId = (await f.send('/api/videos', { method: 'POST', body: VIDEO })).body.id;
+  assert.equal((await f.send('/api/me', { origin: PAGES_ORIGIN })).status, 403);
+  const operations = [
+    ['/api/cards', 'POST', CARD],
+    ['/api/cards/' + cardId, 'PATCH', { ...CARD, value: 0 }],
+    ['/api/cards/' + cardId, 'DELETE'],
+    ['/api/videos', 'POST', VIDEO],
+    ['/api/videos/' + videoId, 'DELETE'],
+    ['/api/videos/' + videoId + '/like', 'POST', {}],
+    ['/api/upload', 'POST', {}],
+  ];
+  for (const [path, method, body] of operations) {
+    const response = await f.send(path, { method, body, origin: PAGES_ORIGIN });
+    assert.equal(response.status, 403, method + ' ' + path);
+    assert.equal(response.headers.get('access-control-allow-origin'), null);
+  }
+  const cards = (await f.send('/api/cards')).body.cards;
+  const videos = (await f.send('/api/videos')).body.videos;
+  assert.equal(cards.length, 1);
+  assert.equal(cards[0].value, CARD.value);
+  assert.equal(videos.length, 1);
+  assert.equal(videos[0].likes, 0);
+  assert.equal(f.BUCKET.objects.size, 0);
+});
+
+test('unrelated origins do not receive CORS access to the public APIs', async t => {
+  const f = fixture(t);
+  for (const origin of ['https://other.test', 'https://kalebreus.github.io.evil.test', 'null']) {
+    for (const path of ['/api/cards', '/api/videos', '/api/me']) {
+      const response = await f.send(path, { origin });
+      assert.equal(response.status, 403, origin + ' ' + path);
+      assert.equal(response.headers.get('access-control-allow-origin'), null);
+    }
+  }
+});

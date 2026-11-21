@@ -19,3 +19,4 @@ const manifest=JSON.parse(await readFile(resolve(root,'.openai/hosting.json'),'u
 
 if(!manifest.project_id)throw new Error('Missing Site identity');
 console.log('Gold Packs built: Worker, assets and schema migrations.');
+await import('./build-pages.mjs');

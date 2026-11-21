@@ -42,3 +42,11 @@ Este projeto usa um Worker com D1/R2 para cadastro, autenticação e arquivos. O
 ## Baixar o código
 
 Uma cópia do código, imagens disponíveis e testes pode ser baixada em https://gold-packs-club.aromaticearth4.chatgpt.site/downloads/gold-packs-codigo.zip. O ZIP contém os arquivos fonte e a configuração do Site, sem credenciais, registros do banco de dados ou vídeos enviados. Para enviar manualmente ao GitHub, extraia o ZIP e envie os arquivos da pasta `gold-packs` ao repositório.
+
+## GitHub Pages
+
+Endereço preparado: https://kalebreus.github.io/cart-oteste/.
+
+`npm run build` atualiza o Worker e a pasta estática `docs/`. Para gerar somente a interface Pages, use `npm run build:pages`. Publique a branch `main`, diretório `/docs`, nas configurações GitHub Pages do repositório. A pasta `docs/` é gerada; edite os arquivos fonte na raiz e em `src/`.
+
+A interface Pages mostra a página inicial, o catálogo e a comunidade. As leituras públicas vêm do serviço Sites, com CORS limitado ao domínio `https://kalebreus.github.io`. Login, coleção, cadastro, publicação e gerenciamento abrem o serviço de dados em navegação normal, preservando a autenticação existente. A interface Pages não recebe cookies, tokens ou chaves do serviço. Imagens de referência são servidas localmente em `/cart-oteste/assets/`; mídias enviadas pelos usuários continuam no serviço de armazenamento.

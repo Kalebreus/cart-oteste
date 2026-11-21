@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /cart-oteste/
+Sitemap: https://kalebreus.github.io/cart-oteste/sitemap.xml
