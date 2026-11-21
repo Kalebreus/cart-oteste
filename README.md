@@ -47,6 +47,6 @@ Uma cópia do código, imagens disponíveis e testes pode ser baixada em https:/
 
 Endereço preparado: https://kalebreus.github.io/cart-oteste/.
 
-`npm run build` atualiza o Worker e a pasta estática `docs/`. Para gerar somente a interface Pages, use `npm run build:pages`. Publique a branch `main`, diretório `/docs`, nas configurações GitHub Pages do repositório. A pasta `docs/` é gerada; edite os arquivos fonte na raiz e em `src/`.
+`npm run build` atualiza o Worker e a pasta estática `docs/`. Para gerar somente a interface Pages, use `npm run build:pages`. Nas configurações GitHub Pages, use a origem `GitHub Actions`. O workflow `.github/workflows/deploy-pages.yml` gera `docs/` e publica o artefato a cada alteração relevante na branch `main`; também pode ser executado manualmente pela aba Actions. A pasta `docs/` é gerada; edite os arquivos fonte na raiz e em `src/`.
 
 A interface Pages mostra a página inicial, o catálogo e a comunidade. As leituras públicas vêm do serviço Sites, com CORS limitado ao domínio `https://kalebreus.github.io`. Login, coleção, cadastro, publicação e gerenciamento abrem o serviço de dados em navegação normal, preservando a autenticação existente. A interface Pages não recebe cookies, tokens ou chaves do serviço. Imagens de referência são servidas localmente em `/cart-oteste/assets/`; mídias enviadas pelos usuários continuam no serviço de armazenamento.
