@@ -45,7 +45,7 @@ Uma cópia do código, imagens disponíveis e testes pode ser baixada em https:/
 
 ## GitHub Pages
 
-Endereço preparado: https://kalebreus.github.io/cart-oteste/.
+Site público no GitHub Pages: https://kalebreus.github.io/cart-oteste/.
 
 `npm run build` atualiza o Worker e a pasta estática `docs/`. Para gerar somente a interface Pages, use `npm run build:pages`. Nas configurações GitHub Pages, use a origem `GitHub Actions`. O workflow `.github/workflows/deploy-pages.yml` gera `docs/` e publica o artefato a cada alteração relevante na branch `main`; também pode ser executado manualmente pela aba Actions. A pasta `docs/` é gerada; edite os arquivos fonte na raiz e em `src/`.
 
